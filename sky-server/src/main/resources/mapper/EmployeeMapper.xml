@@ -12,7 +12,7 @@
         order by create_time desc
     </select>
 
-    <select id="update" resultType="Employee">
+    <update id="update">
         update employee
         <set>
             <if test="name != null">name = #{name},</if>
@@ -26,5 +26,5 @@
             <if test="status != null">status = #{status},</if>
         </set>
         where id = #{id}
-    </select>
+    </update>
 </mapper>
